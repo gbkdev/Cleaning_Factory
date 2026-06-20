@@ -591,7 +591,7 @@ export function CustomersPage() {
         className="print-root-offscreen bg-white p-6 text-black"
         aria-hidden="true"
       >
-        <h1 className="text-2xl font-bold">Tracon Management — Customers</h1>
+        <h1 className="text-2xl font-bold">Tracon System — Customers</h1>
         <p className="mt-1 text-sm text-gray-600">
           {printExportLabel} · Generated {new Date().toLocaleString()}
         </p>
