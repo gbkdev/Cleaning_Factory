@@ -1,0 +1,105 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+  --color-coral-50: #fff5f3;
+  --color-coral-100: #ffe4df;
+  --color-coral-200: #ffc9c0;
+  --color-coral-300: #ffa397;
+  --color-coral-400: #ff7a6b;
+  --color-coral-500: #ff5c4d;
+  --color-coral-600: #ed3d32;
+  --color-coral-700: #c82e29;
+  --color-coral-800: #a52926;
+  --color-coral-900: #882726;
+}
+
+:root {
+  --app-bg: #f3f4f6;
+  --app-surface: #ffffff;
+  --app-text: #111827;
+  --app-muted: #6b7280;
+  --app-border: #e5e7eb;
+  --app-sidebar: #ffffff;
+  --app-hover: #eceff3;
+}
+
+.dark {
+  --app-bg: #0f1117;
+  --app-surface: #181b24;
+  --app-text: #f3f4f6;
+  --app-muted: #9ca3af;
+  --app-border: #2d3140;
+  --app-sidebar: #14171f;
+  --app-hover: #212633;
+}
+
+html {
+  font-family: var(--font-sans);
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  background: var(--app-bg);
+  color: var(--app-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+input,
+select,
+textarea,
+button {
+  color: inherit;
+}
+
+@keyframes pwa-pop {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+#root {
+  min-height: 100dvh;
+  overflow-x: hidden;
+}
+
+/* Print-friendly report (Save as PDF from print dialog) */
+@media screen {
+  /* Keep export layout in DOM for print, but off-screen on normal view */
+  #print-root.print-root-offscreen {
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #print-root,
+  #print-root * {
+    visibility: visible;
+  }
+  #print-root {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 24px;
+    background: white;
+    color: black;
+  }
+}
