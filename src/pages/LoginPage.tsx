@@ -134,7 +134,7 @@ export function LoginPage() {
             <Flame className="h-8 w-8" aria-hidden />
           </div>
           <h1 className="text-2xl font-semibold text-[var(--app-text)]">
-            Cleaning Factory
+            Tracon System
           </h1>
           <p className="mt-1 text-sm text-[var(--app-muted)]">
             {usesSupabaseAuth
