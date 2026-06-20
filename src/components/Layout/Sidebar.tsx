@@ -87,7 +87,7 @@ export function Sidebar({ open, onClose }: Props) {
             </div>
             <div className="text-left">
               <p className="text-sm font-semibold text-[var(--app-text)]">
-                Cleaning Factory
+              Tracon System
               </p>
               <p className="text-xs text-[var(--app-muted)]">Operations</p>
             </div>
